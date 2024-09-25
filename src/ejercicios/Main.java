@@ -11,5 +11,8 @@ public class Main {
         tema2.ejercicio1();
         tema2.ejercicio2();
         tema2.ejercicio3();
+        tema2.ejercicio4();
+        tema2.ejercicio5();
+        tema2.ejercicio6();
     }
 }

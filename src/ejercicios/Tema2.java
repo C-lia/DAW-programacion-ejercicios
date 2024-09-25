@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package ejercicios;
 
 import java.util.Random;
@@ -24,6 +21,13 @@ public class Tema2 {
      */
     public void ejercicio1() {
         System.out.println("\n------Ejercicio 1------\n");
+        double s = consola.nextDouble();
+        int x = (int) s / 60;
+        int horas = (int) x / 60;
+        int minutos = x % 60;
+        int segundos = (int) s % 60;
+        
+        System.out.println("El tiempo será de: " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos.");
     }
     
     /**
@@ -76,8 +80,29 @@ public class Tema2 {
      * a) MegaBytes (MB) a MebiBytes (MiB) 
      * b) MebiBytes (MiB) a Megabits (Mb)
      */
-    public void ejercicio6() {}
-     
+    public void ejercicio6() {
+    // 1 MB equivale a 1 millón de bytes (1 MB = 1,000,000 bytes).
+    // 1 MiB equivale a 1,048,576 bytes (1 MiB = 2^20 bytes).
+        System.out.println("\n------Ejercicio 6------\n");
+    
+        // Definimos cuantos bytes vale 1 mb y 1 mib.
+        double mb_bytes = 1000000;
+        double mib_bytes = Math.pow(2, 20);
+        
+        System.out.println(" Introduce MegaBytes(MB)");
+        double mb = consola.nextDouble();
+        System.out.println(" Introduce MebiBytes(MiB)");
+        double mib = consola.nextDouble();
+        
+        double operacionMib = mib * mib_bytes / mb_bytes;
+        double operacionMb = mb * mb_bytes / mib_bytes;
+        
+        System.out.println("mib: " + operacionMib);
+        System.out.println("mb: " + operacionMb);
+        
+    
+    }
+
     /**
      *
      * Ejercicio 7: Se necesita un algoritmo que calcule el coste total
