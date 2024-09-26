@@ -14,22 +14,32 @@ public class Tema2 {
     // private final Random random = new Random();
     
     /**
-     *
-     * Ejercicio 1: Diseña un algoritmo que pida por teclado 
-     * un tiempo expresado en segundos y muestre por pantalla 
-     * ese valor expresado en horas, minutos y segundos. 
-     */
+ * Ejercicio 1: Diseña un algoritmo que pida por teclado 
+ * un tiempo expresado en segundos y muestre por pantalla 
+ * ese valor expresado en horas, minutos y segundos.
+ */
     public void ejercicio1() {
-        System.out.println("\n------Ejercicio 1------\n");
-        double s = consola.nextDouble();
-        int x = (int) s / 60;
-        int horas = (int) x / 60;
-        int minutos = x % 60;
-        int segundos = (int) s % 60;
-        
-        System.out.println("El tiempo será de: " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos.");
-    }
+    System.out.println("\n------Ejercicio 1------\n");
+
+    System.out.println("Introduce los segundos");
+    // Segundos que mete el usuario
+    double s = consola.nextDouble();
+    /* Convertimos los segundos a minutos dividiendolo entre 60, pero este no lo 
+    sacaremos por pantalla porque los minutos que usaremos seran los restantes de las horas. */
+    int x = (int) s / 60;
+    // Con los minutos lo dividimos entre 60 para que nos de las horas.
+    int horas = x / 60;
+    // De las horas, le hacemos el resto para obtener los minutos.
+    int minutos = x % 60;
+    // Le hacemos el resto a los minutos y asi obtenemos los segundos restantes.
+    int segundos = (int) s % 60;
+
+    // Mostrar el resultado en la consola en el formato adecuado
+    System.out.println("El tiempo será de: " + horas + " horas, " + minutos + " minutos y " + segundos + " segundos.");
     
+    // REVISAR idea potencia.
+}
+
     /**
      *
      * Ejercicio 2: Crea un algoritmo que simule el lanzamiento de un dado de N caras. 
@@ -86,19 +96,19 @@ public class Tema2 {
         System.out.println("\n------Ejercicio 6------\n");
     
         // Definimos cuantos bytes vale 1 mb y 1 mib.
-        double mb_bytes = 1000000;
-        double mib_bytes = Math.pow(2, 20);
+        double bytes_mb = 1000000;
+        double bytes_mib = Math.pow(2, 20);
         
         System.out.println(" Introduce MegaBytes(MB)");
         double mb = consola.nextDouble();
         System.out.println(" Introduce MebiBytes(MiB)");
         double mib = consola.nextDouble();
         
-        double operacionMib = mib * mib_bytes / mb_bytes;
-        double operacionMb = mb * mb_bytes / mib_bytes;
+        double operacionMib = mib * bytes_mib / bytes_mb;
+        double operacionMb = mb * bytes_mb / bytes_mib;
         
-        System.out.println("mib: " + operacionMib);
-        System.out.println("mb: " + operacionMb);
+        System.out.println(mb + " MegaBytes(MB) equivale a " + operacionMb + " MebiBytes(MiB)");
+        System.out.println(mib + " MebiBytes(MIB) equivale a " + operacionMib + " MegaBytes(MB)");
         
     
     }
@@ -114,7 +124,47 @@ public class Tema2 {
      * en la habitación (redondeando hacia arriba si el resultado no es un numero 
      * entero) y el precio total a invertir.
      */
-    public void ejercicio7() {}
+    public void ejercicio7() {
+        System.out.println("\n------Ejercicio 7------\n");
+        
+        System.out.println("Introduce el ancho de la habitacion en metros");
+        double anchoHabitacion = consola.nextDouble();
+        System.out.println("Introduce el largo de la habitacion en metros");
+        double largoHabitacion = consola.nextDouble();
+        System.out.println("Introduce el largo de la baldosa en centimetros");
+        double baldosa = consola.nextDouble();
+        System.out.println("Introduce el precio de la baldosa en euros");
+        double precioBaldosa = consola.nextDouble();
+        
+        // METODO 1
+        // Convertir el ancho y el largo de la habitacion a centimetros.
+        double anchoHabCent = 100 * anchoHabitacion;
+        double largoHabCent = 100 * largoHabitacion;
+        // Dividir el ancho y el largo con la baldosa de fonma individual para saber el numero de baldosas del ancho y del largo.
+        double anchoBaldosa = anchoHabCent / baldosa;
+        double largoBaldosa = largoHabCent / baldosa;
+        // Hacemos el area de la habitacion con el numero de baldosas y le hacemos un "Math.ceil()" para que nos salga el numero al alza".
+        int numeroBaldosa =(int) Math.ceil(largoBaldosa * anchoBaldosa);
+        // El resultado del número de baldosas lo multiplicamos por el precio y asi obtenemos el precio total.
+        double precioTotal = numeroBaldosa * precioBaldosa;
+        
+        System.out.println("Numero de baldosas total: " + numeroBaldosa);
+        System.out.println("Precio total de baldosas es: " + precioTotal + " euros");
+        
+        //Metodo 2
+        // Convertimos el largo de la baldosa a metros.
+        double largoBaldMetro = baldosa / 100;
+        // Hacemos el area de la habitacion y de la baldosa.
+        double areaHabitacion = anchoHabitacion * largoHabitacion;
+        double areaBaldosa = largoBaldMetro * largoBaldMetro;
+        // Dividimos el area de la habitacion entre el area de la baldosa para sacar el número de baldosas y le hacemos un "Mat.ceil()" para redondear al alza.
+        int numeroBaldosa2 = (int) Math.ceil(areaHabitacion / areaBaldosa);
+        // Multiplicamos el numero de baldosas por el precio de la baldosa para obtener el total.
+        double precioTotal2 = numeroBaldosa2 * precioBaldosa;
+        
+        System.out.println("Numero de baldosas total: " + numeroBaldosa2);
+        System.out.println("Precio total de baldosas es: " + precioTotal2 + " euros");
+    }
      
     /**
      *
@@ -126,7 +176,14 @@ public class Tema2 {
      * los 5399 segundos. Crea un programa que pida al usuario el 
      * número de segundos transcurridos y muestre el minuto en que nos encontramos.
      */
-    public void ejercicio8() {}
+    public void ejercicio8() {
+        System.out.println("\n------Ejercicio 8------\n");
+        System.out.println("Ingrese el segundo del partido.");
+        double segundo = consola.nextDouble();
+        
+        int minuto =(int) Math.ceil(segundo / 60);
+        System.out.println("Minuto: " + minuto);
+    }
        
     /**
      *
@@ -134,5 +191,8 @@ public class Tema2 {
      * a) Mostrar cada una de sus cifras (una debajo de otra) 
      * b) Crear un nuevo número con las cifras del primero, pero al revés.
      */
-    public void ejercicio9() {}  
+    public void ejercicio9() {
+        System.out.println("Ingresa un numero de 4 cifras");
+        
+    } 
 }
