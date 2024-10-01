@@ -51,14 +51,18 @@ public class Tema2 {
         double n = consola.nextDouble();
         /*Usamos un Math.random() para que nos de un numero aleatoria ente 0 y 1. Luego le hacemos un Math.ceil()
             para que nos ofresca redondee al alza y asi nunca nos de 0. Lo multiplicamos por el número de caras.*/
-        int cara = (int) Math.ceil(Math.random() * n);
+        int cara = (int) (Math.random() * n) + 1;
         System.out.println("La cara es: " + cara);
+        
+        
 
         // Forma David
+        /*
         int n2 = consola.nextInt();
         Random random = new Random();
         int caraRandom = random.nextInt(n2) + 1;
         System.out.println("La cara es: " + caraRandom);
+        */
     }
 
     /**
@@ -93,8 +97,8 @@ public class Tema2 {
         double c = consola.nextDouble();
         
         // Usamos la formula de ecuaciones de 2º grado y despejamos.
-        double resultado1 = (-b + Math.sqrt(Math.pow(b, 2) - 4*c)) / (2*a); 
-        double resultado2 = (-b - Math.sqrt(Math.pow(b, 2) - 4*c)) / (2*a); 
+        double resultado1 = (-b + Math.sqrt(Math.pow(b, 2) - 4*a*c)) / (2*a); 
+        double resultado2 = (-b - Math.sqrt(Math.pow(b, 2) - 4*a*c)) / (2*a); 
         System.out.println("Los resultados de esta ecuacion son: " + resultado1 + " y " + resultado2);
     }
 
@@ -214,7 +218,7 @@ public class Tema2 {
         System.out.println("Ingrese el segundo del partido.");
         double segundo = consola.nextDouble();
 
-        int minuto = (int) Math.ceil(segundo / 60);
+        int minuto = (int) (segundo / 60) + 1;
         System.out.println("Minuto: " + minuto);
     }
 
