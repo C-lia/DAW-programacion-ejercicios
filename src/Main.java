@@ -30,6 +30,6 @@ public class Main {
 //        mySwitch.ejercicio1();
 //        mySwitch.ejercicio2();
 //        mySwitch.ejercicio3();
-        mySwitch.ejercicio4();
+//        mySwitch.ejercicio4();
     }
 }
