@@ -2,7 +2,9 @@
 import ejercicios.tema2.Tema2;
 import ejercicios.tema3.IfElse;
 import ejercicios.tema3.MySwitch;
-
+import repaso.RepasoT3;
+        
+        
 public class Main {
 
     public static void main(String[] args) {
@@ -31,5 +33,14 @@ public class Main {
 //        mySwitch.ejercicio2();
 //        mySwitch.ejercicio3();
 //        mySwitch.ejercicio4();
+
+        RepasoT3 repasoT3 = new RepasoT3();
+//        repasoT3.ejercicio10();
+//        repasoT3.ejercicio11();
+//        repasoT3.ejercicio12();
+//        repasoT3.ejercicio14();
+//        repasoT3.ejercicio15();
+        repasoT3.ejercicio16();
+        
     }
 }
