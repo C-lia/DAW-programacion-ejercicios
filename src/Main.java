@@ -1,15 +1,42 @@
 
-import ejercicios.tema2.Tema2;
-import ejercicios.tema3.IfElse;
-import ejercicios.tema3.MySwitch;
+import tema1.EjerciciosCalcular;
+import tema1.HolaMundo;
+
+import tema2.EjerciciosClase;
+import tema2.MyScanner;
+import tema2.EjerciciosT2;
+
+import tema3.IfElse;
+import tema3.MySwitch;
+
 import repaso.RepasoT3;
         
         
 public class Main {
 
     public static void main(String[] args) {
+        
+        //TEMA 1
+        HolaMundo holaMundo = new HolaMundo();
+//        holaMundo.holaMundo();
+        
+        EjerciciosCalcular calcular = new EjerciciosCalcular();
+//        calcular.edad();
+//        calcular.sumar();
+//        calcular.restar();
+//        calcular.multiplicar();
+//        calcular.dividir();
+//        calcular.areas();
+        
         // TEMA 2
-        Tema2 tema2 = new Tema2();
+        EjerciciosClase clase = new EjerciciosClase();
+//        clase.ejerciciosClase();
+        
+        
+        MyScanner myScanner = new MyScanner();
+//        myScanner.ejerciciosClase();
+        
+        EjerciciosT2 tema2 = new EjerciciosT2();
 //        tema2.ejercicio1();
 //        tema2.ejercicio2();
 //        tema2.ejercicio3();
@@ -22,6 +49,7 @@ public class Main {
 
         // TEMA 3
         IfElse ifElse = new IfElse();
+//        ifElse.ejerciciosClase();
 //        ifElse.ejercicio1();
 //        ifElse.ejercicio2();
 //        ifElse.ejercicio3();
@@ -40,7 +68,6 @@ public class Main {
 //        repasoT3.ejercicio12();
 //        repasoT3.ejercicio14();
 //        repasoT3.ejercicio15();
-        repasoT3.ejercicio16();
-        
+//        repasoT3.ejercicio16();
     }
 }

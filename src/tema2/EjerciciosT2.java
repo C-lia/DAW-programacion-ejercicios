@@ -1,4 +1,4 @@
-package ejercicios.tema2;
+package tema2;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -7,7 +7,7 @@ import java.util.Scanner;
  *
  * @author Celia
  */
-public class Tema2 {
+public class EjerciciosT2 {
 
     private final Scanner consola = new Scanner(System.in);
     // private final Random random = new Random();
