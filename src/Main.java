@@ -9,7 +9,7 @@ import tema2.EjerciciosT2;
 import tema3.IfElse;
 import tema3.MySwitch;
 
-import repaso.RepasoT3;
+import repaso.RepasoExamen;
         
         
 public class Main {
@@ -62,7 +62,7 @@ public class Main {
 //        mySwitch.ejercicio3();
 //        mySwitch.ejercicio4();
 
-        RepasoT3 repasoT3 = new RepasoT3();
+        RepasoExamen repasoT3 = new RepasoExamen();
 //        repasoT3.ejercicio10();
 //        repasoT3.ejercicio11();
 //        repasoT3.ejercicio12();
