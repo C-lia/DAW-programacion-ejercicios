@@ -12,7 +12,7 @@ public class HolaMundo {
     public void holaMundo(){
         // Mi primer programa
         System.out.println("Hola me llamo Celia.....");
-        System.out.println("Tengo 27 años");
+        System.out.println("Tengo 27 años.....");
         System.out.println("Vivo en España");
     }
 
