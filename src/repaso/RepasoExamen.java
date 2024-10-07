@@ -185,7 +185,7 @@ public class RepasoExamen {
     }
     
     /**
-     * Ejercicio
+     * Ejercicio 11:
      * Pregunta el nombre de dos jugadores. A continuación, simula     
      * una partida de tirada de dados: el primer jugador tira un dado de 6 caras
      * y saca una puntuación. 
@@ -311,17 +311,64 @@ public class RepasoExamen {
         int segundo = (int) (n / 100) - (primero * 10);            
         int tercero = (int) (n / 10) - (primero * 100)  - (segundo * 10);
         int cuarto = (int) n - (primero * 1000)  - (segundo * 100) - (tercero * 10);            
-        int tipoOperacion2 = (segundo * 10) + tercero;    
+        int tipoOperacion2 = (segundo * 10) + tercero; 
      }
      
     /**
      * Realiza un programa que dada una cantidad de dinero en Euros, realice un     
      * desglose en billetes y monedas. Los billetes disponibles son de
-     * 500,200,10,50,20,10 y 5€ y las monedas de 2 y 1€.     
+     * 500,200,100,50,20,10 y 5€ y las monedas de 2 y 1€.     
      */
-     
     public void ejercicio16() {        
         System.out.println("Ingresa la cantidad de dinero");
-        double dinero = consola.nextDouble();    
+        int cantidad = consola.nextInt();
+        int numeroBilletes;
+        int numeroMonedas;
+        
+        if (cantidad>=500) {
+        numeroBilletes = cantidad/500;
+        cantidad = cantidad % 500;
+            System.out.println(numeroBilletes + " billetes de 500");
+        }
+         if (cantidad>=200) {
+        numeroBilletes = cantidad/200;
+        cantidad = cantidad % 200;
+            System.out.println(numeroBilletes + " billetes de 200");
+        }
+         if (cantidad>=100) {
+        numeroBilletes = cantidad/100;
+        cantidad = cantidad % 100;
+            System.out.println(numeroBilletes + " billetes de 100");
+        }
+         if (cantidad>=50) {
+        numeroBilletes = cantidad/50;
+        cantidad = cantidad % 50;
+            System.out.println(numeroBilletes + " billetes de 50");
+        }
+        if (cantidad>=20) {
+        numeroBilletes = cantidad/20;
+        cantidad = cantidad % 20;
+            System.out.println(numeroBilletes + " billetes de 20");
+        }
+         if (cantidad>=10) {
+        numeroBilletes = cantidad/10;
+        cantidad = cantidad % 10;
+            System.out.println(numeroBilletes + " billetes de 10");
+        }
+        if (cantidad>=5) {
+        numeroBilletes = cantidad/5;
+        cantidad = cantidad % 5;
+            System.out.println(numeroBilletes + " billetes de 5");
+        }
+         if (cantidad>=2) {
+        numeroMonedas = cantidad/2;
+        cantidad = cantidad % 2;
+            System.out.println(numeroMonedas + " monedas de 2");
+        }
+        if (cantidad>=1) {
+        numeroMonedas = cantidad/1;
+            System.out.println(numeroMonedas + " monedas de 1");
+        }
+        
     }
 }
