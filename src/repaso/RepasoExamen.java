@@ -185,7 +185,7 @@ public class RepasoExamen {
     }
     
     /**
-     * Ejercicio
+     * Ejercicio 11:
      * Pregunta el nombre de dos jugadores. A continuación, simula     
      * una partida de tirada de dados: el primer jugador tira un dado de 6 caras
      * y saca una puntuación. 
@@ -311,15 +311,14 @@ public class RepasoExamen {
         int segundo = (int) (n / 100) - (primero * 10);            
         int tercero = (int) (n / 10) - (primero * 100)  - (segundo * 10);
         int cuarto = (int) n - (primero * 1000)  - (segundo * 100) - (tercero * 10);            
-        int tipoOperacion2 = (segundo * 10) + tercero;    
+        int tipoOperacion2 = (segundo * 10) + tercero; 
      }
      
     /**
      * Realiza un programa que dada una cantidad de dinero en Euros, realice un     
      * desglose en billetes y monedas. Los billetes disponibles son de
-     * 500,200,10,50,20,10 y 5€ y las monedas de 2 y 1€.     
+     * 500,200,100,50,20,10 y 5€ y las monedas de 2 y 1€.     
      */
-     
     public void ejercicio16() {        
         System.out.println("Ingresa la cantidad de dinero");
         int cantidad = consola.nextInt();
@@ -370,5 +369,9 @@ public class RepasoExamen {
         numeroMonedas = cantidad/1;
             System.out.println(numeroMonedas + " monedas de 1");
         }
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 924af34d93323aedf18e3a2db6341fc44ec558d2
     }
 }

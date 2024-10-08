@@ -64,6 +64,12 @@ public class Main {
 //        mySwitch.ejercicio4();
 
         RepasoExamen repasoT3 = new RepasoExamen();
+//        repasoT3.ejercicio5();
+//        repasoT3.ejercicio6_1();
+//        repasoT3.ejercicio6_2();
+//        repasoT3.ejercicio7();
+//        repasoT3.ejercicio8();
+//        repasoT3.ejercicio9();
 //        repasoT3.ejercicio10();
 //        repasoT3.ejercicio11();
 //        repasoT3.ejercicio12();
