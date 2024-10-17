@@ -369,6 +369,9 @@ public class RepasoExamen {
         numeroMonedas = cantidad/1;
             System.out.println(numeroMonedas + " monedas de 1");
         }
+<<<<<<< HEAD
+=======
         
+>>>>>>> 924af34d93323aedf18e3a2db6341fc44ec558d2
     }
 }

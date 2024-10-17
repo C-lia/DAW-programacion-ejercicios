@@ -8,6 +8,7 @@ import tema2.EjerciciosT2;
 
 import tema3.IfElse;
 import tema3.MySwitch;
+import tema3.Bucles;
 
 import repaso.RepasoExamen;
 import tema3.Bucles;
@@ -78,6 +79,7 @@ public class Main {
 //        repasoT3.ejercicio16();
 
         Bucles bucles = new Bucles();
+<<<<<<< HEAD
 //        bucles.ejercicio1();
 //        bucles.ejercicio2();
 //        bucles.ejercicio3();
@@ -112,5 +114,8 @@ public class Main {
 //        buclesEjercicios.ejercicio8();
 //        buclesEjercicios.ejercicio9();
 
+=======
+        bucles.clase();
+>>>>>>> b52ff38c700f170e3d98faaffe39b55243a8de7d
     }
 }
