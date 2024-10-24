@@ -8,12 +8,13 @@ import tema2.EjerciciosT2;
 
 import tema3.IfElse;
 import tema3.MySwitch;
-import tema3.Bucles;
 
-import repaso.RepasoExamen;
-import tema3.Bucles;
+import repaso.RepasoExamen1;
+import tema3.BuclesAnidados;
+import tema3.WhileEjercicios;
 import tema3.BuclesEjercicios;
 import tema3.DoWhileEjercicios;
+import tema3.ForEjercicios;
 
 public class Main {
 
@@ -64,7 +65,7 @@ public class Main {
 //        mySwitch.ejercicio3();
 //        mySwitch.ejercicio4();
 
-        RepasoExamen repasoT3 = new RepasoExamen();
+        RepasoExamen1 repasoT3 = new RepasoExamen1();
 //        repasoT3.ejercicio5();
 //        repasoT3.ejercicio6_1();
 //        repasoT3.ejercicio6_2();
@@ -78,18 +79,18 @@ public class Main {
 //        repasoT3.ejercicio15();
 //        repasoT3.ejercicio16();
 
-        Bucles bucles = new Bucles();
-<<<<<<< HEAD
-//        bucles.ejercicio1();
-//        bucles.ejercicio2();
-//        bucles.ejercicio3();
-//        bucles.ejercicio4();
-//        bucles.ejercicio5();
-//        bucles.ejercicio6();
-//        bucles.ejercicio7();
-//        bucles.ejercicio8();
-//        bucles.ejercicio9();
-//        bucles.ejercicio10();
+        WhileEjercicios buclesWhile = new WhileEjercicios();
+//        buclesWhile.clase();
+//        buclesWhile.ejercicio1();
+//        buclesWhile.ejercicio2();
+//        buclesWhile.ejercicio3();
+//        buclesWhile.ejercicio4();
+//        buclesWhile.ejercicio5();
+//        buclesWhile.ejercicio6();
+//        buclesWhile.ejercicio7();
+//        buclesWhile.ejercicio8();
+//        buclesWhile.ejercicio9();
+//        buclesWhile.ejercicio10();
 
         DoWhileEjercicios doWhile = new DoWhileEjercicios();
 //        doWhile.ejercicio1();
@@ -106,7 +107,7 @@ public class Main {
         BuclesEjercicios buclesEjercicios = new BuclesEjercicios();
 //        buclesEjercicios.ejercicio1();
 //        buclesEjercicios.ejercicio2();
-        buclesEjercicios.ejercicio3();
+//        buclesEjercicios.ejercicio3();
 //        buclesEjercicios.ejercicio4();
 //        buclesEjercicios.ejercicio5();
 //        buclesEjercicios.ejercicio6();
@@ -114,8 +115,30 @@ public class Main {
 //        buclesEjercicios.ejercicio8();
 //        buclesEjercicios.ejercicio9();
 
-=======
-        bucles.clase();
->>>>>>> b52ff38c700f170e3d98faaffe39b55243a8de7d
+        ForEjercicios forEjercicios = new ForEjercicios();
+//        forEjercicios.ejercicio1();
+//        forEjercicios.ejercicio2();
+//        forEjercicios.ejercicio3();
+//        forEjercicios.ejercicio4();
+//        forEjercicios.ejercicio5();
+//        forEjercicios.ejercicio6();
+//        forEjercicios.ejercicio7();
+//        forEjercicios.ejercicio8();
+//        forEjercicios.ejercicio9();
+//        forEjercicios.ejercicio10();
+//        forEjercicios.ejercicio11();
+        forEjercicios.ejercicio12();
+        forEjercicios.ejercicio13();
+
+        BuclesAnidados buclesAnidados = new BuclesAnidados();
+//    buclesAnidados.clase();
+//    buclesAnidados.ejercicio1();
+//    buclesAnidados.ejercicio2();
+        buclesAnidados.ejercicio3();
+//    buclesAnidados.ejercicio4();
+//    buclesAnidados.ejercicio5();
+//    buclesAnidados.ejercicio6();
+//    buclesAnidados.ejercicio7();
     }
+
 }

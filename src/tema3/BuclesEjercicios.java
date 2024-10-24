@@ -92,15 +92,21 @@ public class BuclesEjercicios {
 
         // While
         while (multiplo <= fin) {
-            guardar = guardar + multiplo + ", ";
-            multiplo = multiplo + n;
+            guardar+=multiplo;
+            if (multiplo < fin) {
+                guardar+=", ";
+            }
+            multiplo+=n;
         }
         System.out.println(guardar);
 
         // Do while
         do {
-            guardar = guardar + multiplo + ", ";
-            multiplo = multiplo + n;
+            guardar+=multiplo;
+            if (multiplo < fin) {
+                guardar+=", ";
+            }
+            multiplo = multiplo+=n;
         } while (multiplo <= fin);
         System.out.println(guardar);
 
@@ -229,7 +235,6 @@ public class BuclesEjercicios {
                 if (posicionPrimera == 0) {
                     posicionPrimera = posicion;
                 }
-
                 posicionUltima = posicion;
             }
             guardar = guardar + numeros + ", ";

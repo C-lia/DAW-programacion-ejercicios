@@ -2,7 +2,7 @@
 package repaso;
 import java.util.Scanner;
 
-public class RepasoExamen {
+public class RepasoExamen1 {
     private final Scanner consola = new Scanner(System.in);
     /**     
      * Ejercicio 5: Se necesita un algoritmo que calcule la media de tres notas
@@ -369,9 +369,5 @@ public class RepasoExamen {
         numeroMonedas = cantidad/1;
             System.out.println(numeroMonedas + " monedas de 1");
         }
-<<<<<<< HEAD
-=======
-        
->>>>>>> 924af34d93323aedf18e3a2db6341fc44ec558d2
     }
 }
