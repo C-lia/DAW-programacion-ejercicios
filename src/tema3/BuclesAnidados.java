@@ -103,9 +103,6 @@ public class BuclesAnidados {
 
         for (int i = 1; i <= altura; i++) {
             for (int j = 1; j <= i; j++) {
-                for (int k = n; k <= j; k--) {
-                    System.out.println(" ");
-                }
                 System.out.print(" ");
                 System.out.print("*");
             }
@@ -118,8 +115,9 @@ public class BuclesAnidados {
      * Ejercicio 4: Igual que en el ejercicio anterior, pero además, ahora el
      * usuario introduce el carácter a dibujar:
      */
-//    public void ejercicio4() {
-//    }
+    public void ejercicio4() {
+    }
+
     /**
      * Ejercicio 5: Realiza un programa que pida al usuario un número entero N
      * mayor a 10. A continuación, haz que muestre la lista de números del 1 al
@@ -131,6 +129,32 @@ public class BuclesAnidados {
      * (,). Obviamente, el último valor no debe llevar coma detrás.
      */
     public void ejercicio5() {
+        System.out.println("Introduce el numero");
+        int n = consola.nextInt();
+        String guardar;
+        String guardar2 = "";
+        String guardar3 = "";
+
+        for (int i = 1; i <= n; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                guardar = "FIZZBUZZ";
+            } else if (i % 3 == 0) {
+                guardar = "FIZZ";
+            } else if (i % 5 == 0) {
+                guardar = "BUZZ";
+            } else {
+                guardar = "" + i;
+            }
+            System.out.println(guardar);
+            guardar2 = guardar2 + guardar + " ";
+            if (i < n) {
+                guardar3 = guardar3 + guardar + ",";
+            } else {
+                guardar3 = guardar3 + guardar;
+            }
+        }
+        System.out.println(guardar2);
+        System.out.println(guardar3);
     }
 
     /**
@@ -146,6 +170,21 @@ public class BuclesAnidados {
      * “Lo lograste!” y el juego acaba.
      */
     public void ejercicio6() {
+        int n = (int) (Math.random() * 100) + 1;
+        int usuario;
+        do {
+            System.out.println("Introduce el numero para adivinar");
+            usuario = consola.nextInt();
+            if (usuario > n) {
+                System.out.println("Te has pasado!!");
+            }
+            if (usuario < n) {
+                System.out.println("Te has quedado corto!!");
+            }
+        } while (usuario != n);
+        
+        System.out.println("Lo lograstes!!");
+
     }
 
     /**
@@ -162,6 +201,7 @@ public class BuclesAnidados {
      * dos retira la última bola. Quien haga eso, pierde.
      */
     public void ejercicio7() {
+        
     }
 
 }

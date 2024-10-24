@@ -127,17 +127,17 @@ public class Main {
 //        forEjercicios.ejercicio9();
 //        forEjercicios.ejercicio10();
 //        forEjercicios.ejercicio11();
-        forEjercicios.ejercicio12();
-        forEjercicios.ejercicio13();
+//        forEjercicios.ejercicio12();
+//        forEjercicios.ejercicio13();
 
         BuclesAnidados buclesAnidados = new BuclesAnidados();
 //    buclesAnidados.clase();
 //    buclesAnidados.ejercicio1();
 //    buclesAnidados.ejercicio2();
-        buclesAnidados.ejercicio3();
+//        buclesAnidados.ejercicio3();
 //    buclesAnidados.ejercicio4();
 //    buclesAnidados.ejercicio5();
-//    buclesAnidados.ejercicio6();
+    buclesAnidados.ejercicio6();
 //    buclesAnidados.ejercicio7();
     }
 
