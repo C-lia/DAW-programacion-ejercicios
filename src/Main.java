@@ -134,11 +134,11 @@ public class Main {
 //    buclesAnidados.clase();
 //    buclesAnidados.ejercicio1();
 //    buclesAnidados.ejercicio2();
-//        buclesAnidados.ejercicio3();
+//    buclesAnidados.ejercicio3();
 //    buclesAnidados.ejercicio4();
 //    buclesAnidados.ejercicio5();
-    buclesAnidados.ejercicio6();
-//    buclesAnidados.ejercicio7();
+//    buclesAnidados.ejercicio6();
+    buclesAnidados.ejercicio7();
     }
 
 }

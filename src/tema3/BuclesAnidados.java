@@ -99,9 +99,11 @@ public class BuclesAnidados {
         System.out.println("Numero");
         int n = consola.nextInt();
         int altura = n;
-        int resta = 0;
 
         for (int i = 1; i <= altura; i++) {
+            for (int k = 1; k <= (altura - i); k++) {
+                System.out.print(" ");
+            }
             for (int j = 1; j <= i; j++) {
                 System.out.print(" ");
                 System.out.print("*");
@@ -116,6 +118,23 @@ public class BuclesAnidados {
      * usuario introduce el carácter a dibujar:
      */
     public void ejercicio4() {
+        System.out.println("Numero");
+        int n = consola.nextInt();
+        consola.nextLine();
+        System.out.println("Introduce el caracter");
+        String caracter = consola.nextLine();
+        int altura = n;
+
+        for (int i = 1; i <= altura; i++) {
+            for (int k = 1; k <= (altura - i); k++) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+                System.out.print(caracter);
+            }
+            System.out.println("");
+        }
     }
 
     /**
@@ -182,7 +201,7 @@ public class BuclesAnidados {
                 System.out.println("Te has quedado corto!!");
             }
         } while (usuario != n);
-        
+
         System.out.println("Lo lograstes!!");
 
     }
@@ -201,7 +220,57 @@ public class BuclesAnidados {
      * dos retira la última bola. Quien haga eso, pierde.
      */
     public void ejercicio7() {
-        
-    }
 
+        final int numeroBolas;
+        int maquina;
+        int turno = (int) (Math.random() * 2) + 1;
+        int persona;
+        int bolas;
+
+        do {
+            System.out.println("Introduce el numero de bolas inicial.");
+            bolas = consola.nextInt();
+            if (bolas < 0) {
+                System.out.println("El numero de bolas tiene que ser positivo");
+            }
+        } while (bolas < 0);
+
+        if (turno == 2) {
+            System.out.println("Comienza el usuario");
+        } else if (turno == 1) {
+            System.out.println("Comienza la maquina");
+        }
+
+        while (bolas > 0) {
+            if (turno % 2 == 0) {
+                System.out.println("Turno persona");
+                persona = consola.nextInt();
+                if (persona >= 1 && persona <= 3) {
+                    bolas -= persona;
+                } else {
+                    System.out.println("El numero debe de ser entre 1 y 3.");
+                    System.out.println("Turno persona");
+                    persona = consola.nextInt();
+
+                    do {
+                        System.out.println("Turno persona");
+                        persona = consola.nextInt();
+                        if (persona >= 1 && persona <= 3) {
+                            bolas -= persona;
+                        } else {
+                            System.out.println("El numero debe de ser entre 1 y 3.");
+                        }
+                    } while (true);
+                }
+            } else if (turno % 2 != 0) {
+                System.out.println("Turno maquina");
+                maquina = (int) (Math.random() * 3) + 1;
+                bolas -= maquina;
+
+            }
+
+            turno++;
+            System.out.println(bolas);
+        }
+    }
 }
