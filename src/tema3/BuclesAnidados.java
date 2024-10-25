@@ -203,7 +203,6 @@ public class BuclesAnidados {
         } while (usuario != n);
 
         System.out.println("Lo lograstes!!");
-
     }
 
     /**
@@ -224,9 +223,11 @@ public class BuclesAnidados {
         final int numeroBolas;
         int maquina;
         int turno = (int) (Math.random() * 2) + 1;
-        int persona;
+        int persona = 0;
         int bolas;
+        int ultimoTurno = 0;
 
+        // Controlamos que el numero de bolas que va a ver en la caja sea positivo. Con un do While.
         do {
             System.out.println("Introduce el numero de bolas inicial.");
             bolas = consola.nextInt();
@@ -235,42 +236,37 @@ public class BuclesAnidados {
             }
         } while (bolas < 0);
 
+        // Declaramos a traves de un sout quien va a empezar primero.  
         if (turno == 2) {
             System.out.println("Comienza el usuario");
         } else if (turno == 1) {
             System.out.println("Comienza la maquina");
         }
-
-        while (bolas > 0) {
-            if (turno % 2 == 0) {
-                System.out.println("Turno persona");
-                persona = consola.nextInt();
-                if (persona >= 1 && persona <= 3) {
-                    bolas -= persona;
-                } else {
-                    System.out.println("El numero debe de ser entre 1 y 3.");
+        
+        // Vamos asignar los turnos a partir de par o inpar. 
+            if (turno % 2 == 0) { // Persona corresponde con el numero par.
+                do { // Con el do While controlamos que el numero debe ser entre 1 y 3, si no es asi volvemos a pedir el numero.
                     System.out.println("Turno persona");
                     persona = consola.nextInt();
-
-                    do {
-                        System.out.println("Turno persona");
-                        persona = consola.nextInt();
-                        if (persona >= 1 && persona <= 3) {
-                            bolas -= persona;
-                        } else {
-                            System.out.println("El numero debe de ser entre 1 y 3.");
-                        }
-                    } while (true);
-                }
-            } else if (turno % 2 != 0) {
+                    if (persona < 1 || persona > 3) { // Solo sale por consola cuando el numero no esta entre 1 y 3.
+                        System.out.println("El numero debe de ser entre 1 y 3.");
+                    }
+                } while (persona != 1 && persona != 2 && persona != 3); // Este se ejecutará mientras el numero de persona no sea 1,2 o 3.
+                System.out.println("Numero de la persona: " + persona);
+                ultimoTurno = persona; // Esto esta mal pero una idea a mirar.
+                bolas -= persona; // A las bolas le restamos el numero introducido por persona.
+            } else if (turno % 2 != 0) { // Maquina corresponde con el numero inpar.
                 System.out.println("Turno maquina");
-                maquina = (int) (Math.random() * 3) + 1;
-                bolas -= maquina;
-
+                maquina = (int) (Math.random() * 3) + 1; // Hacemos un random y controlamos que sea de 1 a 3.
+                System.out.println("Numero de la maquina: " + maquina);
+                bolas -= maquina; // Restamos el numero que nos ha dado la maquina a las bolas.
+                ultimoTurno = maquina; // Esto esta mal!!!!!!!!!!
             }
-
-            turno++;
-            System.out.println(bolas);
+            turno++; // Sumamos un turno (esto es importante para ir saltando de uno a otro.
+            System.out.println("Numero de bolas restantes: " + bolas);
         }
-    }
+//        String ganador = (ultimoTurno == persona)? "Ha ganado la persona" : "Ha ganado la maquina";
+//        System.out.println(ganador);
+    
+    // Me falta poner quien es el ganador y controlar que no salga un -1 ni nada.
 }
