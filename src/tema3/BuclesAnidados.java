@@ -258,8 +258,10 @@ public class BuclesAnidados {
             } else if (turno == 2) {
 //            } else if (!turnoPersona) {
                 System.out.println("Turno maquina");
-                int pepe = (bolas > MAXIMO_NUMERO_PERMITIDO)? MAXIMO_NUMERO_PERMITIDO : bolas ;
+                int pepe = (bolas > MAXIMO_NUMERO_PERMITIDO) ? MAXIMO_NUMERO_PERMITIDO : bolas;
                 maquina = (int) (Math.random() * pepe) + 1;
+                
+                // FORMA IF-ELSE
 //                if (bolas == 2) {
 //                    maquina = (int) (Math.random() * 2) + 1;
 //                } else if (bolas == 1) {
@@ -268,6 +270,20 @@ public class BuclesAnidados {
 //                } else {
 //                    maquina = (int) (Math.random() * 3) + 1; // Hacemos un random y controlamos que sea de 1 a 3.
 //                }
+
+                // FORMA SWITCH
+//                switch (bolas) {
+//                    case 2:
+//                        maquina = (int) (Math.random() * 2) + 1;
+//                        break;
+//                    case 1:
+//                        maquina = (int) (Math.random() + 1);
+//                        break;
+//                    default:
+//                        maquina = (int) (Math.random() * 3) + 1;
+//                        break;
+//                }
+
                 System.out.println("Numero de la maquina: " + maquina);
                 bolas -= maquina; // Restamos el numero que nos ha dado la maquina a las bolas.
                 ultimoTurnoPersona = false;
